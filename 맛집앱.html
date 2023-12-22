@@ -128,6 +128,17 @@
             });
 
             marker.setMap(map);
+
+            //메시지 창 띄우기 
+            let str=obj.intro;
+            str +="<br>";
+            str +="<a href=\""+obj.url+"\">바로가기</a>";
+
+            var infowindow = new google.maps.InfoWindow({
+                content:str
+            });
+
+            infowindow.open(map,marker);            
         }
 
         //storeArray에 들어있는 상점들을 표로 시각화 시켜보자
